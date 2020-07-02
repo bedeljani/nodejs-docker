@@ -1,0 +1,25 @@
+version: '3'
+services:
+  api:
+     container_name: node_app
+     build: .
+     tty: true
+     restart: always
+     volumes:
+        - ".:/app"
+     ports:
+        - "80:4000"
+     environment:
+        - MONGO_URL=${MONGO_URL}
+     links:
+        - database
+     depends_on:
+        - database
+
+  database:
+     container_name: db_mongo
+     image: 'mongo' 
+     ports:
+        - '27777:27777'
+     volumes:
+        - /data/db
