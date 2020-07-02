@@ -11,7 +11,7 @@ Follow these step to install
 
 
 ```
-$ git clone https://github.com/bedeljani/nodejs-docker
+$ git clone https://github.com/bedeljani/nodejs-docker && cd nodejs-docker
 $ npm install
 ```
 Rename file ``` .env.example``` to ``` .env``` 

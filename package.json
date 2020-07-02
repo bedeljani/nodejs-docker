@@ -17,7 +17,7 @@
   "scripts": {
     "pretest": "jshint app/**",
     "test": "jenkins-mocha test/**/**/ --timeout 10000",
-    "start": "node app.js",
+    "start": "node index.js",
     "up": "docker-compose up -d --build",
     "stop": "docker-compose stop",
     "down": "docker-compose down"
